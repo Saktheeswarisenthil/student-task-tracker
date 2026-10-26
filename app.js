@@ -16,4 +16,18 @@ function showTasks() {
   });
 }
 
+function findTaskById(id) {
+  const task = tasks.find(item => item.id === id);
+
+  if (!task) {
+    console.log(`Task ${id} was not found.`);
+    return;
+  }
+
+  console.log(`Selected task: ${task.title}`);
+}
+
+findTaskById(1);
+findTaskById(99);
+
 showTasks();
